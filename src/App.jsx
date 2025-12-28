@@ -73,8 +73,8 @@ const shuffleDeck = (deck) => {
 const Card = ({ card, onClick, isPlayable, isHidden, isSmall = false }) => {
   if (isHidden) {
     return (
-      <div className={`${isSmall ? 'w-8 h-12' : 'w-16 h-24 sm:w-20 sm:h-28'} bg-indigo-900 rounded border border-white shadow-md flex items-center justify-center`}>
-         <div className="w-full h-full opacity-30 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+      <div className={`${isSmall ? 'w-8 h-12' : 'w-16 h-24 sm:w-20 sm:h-28'} bg-indigo-900 rounded border border-white shadow-md flex items-center justify-center relative overflow-hidden`}>
+         <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-indigo-800 to-indigo-950"></div>
       </div>
     );
   }
@@ -567,7 +567,7 @@ export default function BridgeGame() {
       </div>
 
       {/* Main Table */}
-      <div className="flex-1 relative bg-[url('https://www.transparenttextures.com/patterns/p6.png')] flex items-center justify-center">
+      <div className="flex-1 relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 flex items-center justify-center">
         
         {/* Trump Indicator */}
         {trumpSuit && (
