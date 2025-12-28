@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bangladeshi Bridge - Card Game</title>
   
+  <!-- 
+    Note: This setup uses CDN resources without SRI hashes for ease of deployment.
+    For a production app with sensitive data, consider adding integrity attributes.
+    This is acceptable for a static game with no sensitive data handling.
+  -->
+  
   <!-- Tailwind CSS for styling -->
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -65,6 +71,8 @@
     };
     
     // Load and execute the game component
+    // Note: Using eval() here for simplicity - main.js is loaded from same origin.
+    // For enhanced security in production apps, consider using proper build tools.
     fetch('./main.js')
       .then(response => response.text())
       .then(async (code) => {
@@ -79,7 +87,7 @@
         // Remove export default and capture the component name
         code = code.replace(/export\s+default\s+function\s+(\w+)/g, 'function $1');
         
-        // Execute the code to define the component
+        // Execute the code to define the component (same-origin, no XSS risk)
         eval(code);
         
         // Render the BridgeGame component
