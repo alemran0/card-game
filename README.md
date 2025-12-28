@@ -2,6 +2,17 @@
 
 A web-based card game implementation of the Bangladeshi Bridge (Rang) 5-card deal variant.
 
+## ⚡ Quick Start
+
+**Want to deploy the game right now?** Here's the fastest way:
+
+1. **Go to your repository Settings → Pages**
+2. **Under Source, select "GitHub Actions"**
+3. **Push to main branch** (or manually trigger from Actions tab)
+4. **Done!** Your game will be live at: `https://alemran0.github.io/card-game/`
+
+For detailed deployment instructions and other options, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ## 🎮 Game Rules
 
 - 4 Players, 2 Teams (User+North vs East+West)
