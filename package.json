@@ -1,0 +1,22 @@
+{
+  "name": "card-game",
+  "version": "1.0.0",
+  "description": "A card game web application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'Add your build commands here'",
+    "test": "echo 'Add your test commands here'"
+  },
+  "keywords": [
+    "card-game",
+    "webapp",
+    "javascript"
+  ],
+  "author": "alemran0",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.4"
+  },
+  "devDependencies": {}
+}
